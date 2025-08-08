@@ -24,6 +24,8 @@
 
 .cell img{
     position: relative;
+    width: 60px;
+    height: 60px;
   }
 
 .black {
