@@ -3,6 +3,7 @@ import {Colors} from  "../Colors";
 import {Cell} from  "../Cell"; 
 import blackLogo from '../../assets/images/pawn-black.png'
 import whiteLogo from '../../assets/images/pawn-white.png'
+import { Queen } from "./Queen";
 
 export class Pawn extends Figure {
 
@@ -44,5 +45,13 @@ export class Pawn extends Figure {
         super.moveFigure(target)
 
         this.isFirstStep = false
+
+        if (target.y === 0 && this.color === Colors.WHITE) {
+            this.cell.figure = new Queen(Colors.WHITE, target)
+        }
+
+        if (target.y === 7 && this.color === Colors.BLACK) {
+            this.cell.figure = new Queen(Colors.BLACK, target)
+        }
     }
 }

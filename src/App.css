@@ -60,7 +60,7 @@ body {
     position: absolute;
     width: 64px;
     height: calc(64px * 8 + 128px);
-    background-color: #000000;
+    background-color: #1B4D3E;
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
